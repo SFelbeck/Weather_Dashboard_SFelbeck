@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather!</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <section id="city-search" class="city-search col-12">
+        <p>Find a city!</p>
+        <input id="search-input" class="search-input" type="text" placeholder="Enter city here">
+        <button id="search-btn" class="search-btn">Search</button>
+        <ul id="search-history" class="search-history">
+
+        </ul>
+    </section>
+
+    <section id="search-results" class="search-results col-6">
+        <h2 class="cityWeatherInfo">City and Date awaiting search inquirey</h2>
+        <img id="weatherState" class="weatherState" alt="weather" src="#" />
+        <p id="temp">Temp: </p>
+        <p id="wind">Wind: </p>
+        <p id="humidity">Humidity: </p>
+        <p id="uv-index">UV Index: </p>
+    </section>
+
+    <section id="forecast" class="forcast col-6">
+        <h2>5-day Forecast:</h2>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p id="day1" class="card-text">Upcoming city and weather content will be displayed here.</p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p id="day2" class="card-text">Upcoming city and weather content will be displayed here.</p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p  id="day3" class="card-text">Upcoming city and weather content will be displayed here.</p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p id="day4" class="card-text">Upcoming city and weather content will be displayed here.</p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p id="day5" class="card-text">Upcoming city and weather content will be displayed here.</p>
+            </div>
+          </div>
+    </section>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

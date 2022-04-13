@@ -1,0 +1,40 @@
+:root {
+    --light: antiquewhite;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: aliceblue;
+}
+
+header {
+    background-color: darkblue;
+    text-align: center;
+    color: var(--light);
+}
+
+.city-search {
+    background-color: var(--light);
+}
+
+.search-results{
+    background-color: var(--light);
+}
+
+.favorable-uv {
+    background-color: green;
+}
+
+.moderate-uv {
+    background-color: rgb(180, 180, 3);
+}
+
+.severe-uv {
+    background-color: rgb(165, 0, 0);
+}
+
+.card {
+    background-color: darkblue;
+    color: var(--light);
+    margin: 20px
+}
