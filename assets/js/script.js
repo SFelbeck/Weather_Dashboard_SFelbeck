@@ -18,14 +18,14 @@ var currentDate = moment().format("MMMM Do YYYY");
 
 // calls the function to update all the weather info
 searchBtn.addEventListener("click", function () {
-    callApi();
-})
-// passivly calls the function to create previous searches
-renderBtn();
-
-function callApi() {
-    //calls the api with my new api key
     let city = document.querySelector('#search-input').value;
+    callApi(city);
+})
+
+
+function callApi(city) {
+    //calls the api with my new api key
+    
     const apiCall= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=44642fc0cba2290a3a6af2d7638e70d4&units=metric`;
 
     // fetches the api
@@ -49,7 +49,7 @@ function callApi() {
         .then(function(moreData){
         //saves city to localstorage for later use and calls renderBtn
         localStorage.setItem("city", JSON.stringify(cityArray))
-        renderBtn();
+        renderBtn(data.name);
         // everything from here displays the weather info
         document.querySelector('.cityWeatherInfo').textContent = data.name + " " + currentDate;
         // generates an icon of the weather, in its current state this leaves a blank picture on the application before a city is searched but I ran out of time to implement the css to fix this issue
@@ -86,20 +86,21 @@ function callApi() {
         })
     })
 }
-
-
-// creates a new button that would theoretically save previous searches but I couldnt get the last bits to work, though Im pretty confidant in this function
-function renderBtn(){
-    var cityArray = JSON.parse(localStorage.getItem('city')) || [];
-    for (let index = 0; index < 5; index++) {
-        const element = cityArray[index];
-        var newBtn = document.createElement("button");
-        newBtn.textContent = element;
-        searchHistory.append(newBtn);
-        newBtn.classList.add("newBtn");
-    }
-  
+// an array that holds previous searches that were stored in localstorage
+var cityArray = JSON.parse(localStorage.getItem('city')) || [];
+// creates a new button that would save previous searches and assigns them classes and values
+function renderBtn(text){
+    var newBtn = document.createElement("button");
+    newBtn.textContent = text;
+    searchHistory.append(newBtn);
+    newBtn.classList.add("newBtn");
+    newBtn.setAttribute("value", text)
 }
-
- // This was supposed to call the api with new values for the city but I honestly have no idea how to get this to work
-        //$(".newBtn").click(callApi(city = $("newBtn").text()));
+//loops through created buttons to ensure they have the correct localstorage value
+for (let i = 0; i < cityArray.length; i++) {
+    renderBtn(cityArray[i]);
+}
+ // calls the callApi function with the value of the saved button
+        $(".newBtn").on("click", function(){
+            callApi($(this).val());
+        })
