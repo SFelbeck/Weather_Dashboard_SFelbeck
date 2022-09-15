@@ -1,14 +1,37 @@
-# Weather_Dashboard_SFelbeck
+## Title: Weather Dashboard
+![](https://img.shields.io/badge/license-mit-green)
+[mit](https://choosealicense.com/licenses/mit)
+        
+## Table of Contents
 
-This assignment posed a decent issue but ultimately I was able to prevail! (mostly I couldn't figure out how to get me previous search buttons to work.)
-I had a lot of initial trouble figureing out my api calls but help from classmates and TAs put me on the right track and with some additional help I was able to figure out the rest of the code from there.
-The task of this assignment was to create a functioning weather application that uses the openweathermap api and allows searches by city as well as previously saved searches. The app must display the current weather as well as a five day forecast by using moment.
-In this assignment I went with very minimal css because I knew the javascript was gonna be a lot to handle, it doesnt look pretty but it gets the job done!
-I was also surprised to find that I needed a second api call with the latitude and longetude for the uv index and upcoming forecasts.
-One of the biggest hurdles occured during one of my unsuccessful attemps to implement previous search buttons when I accidentally created an infinite loop of new buttons all calling the api and got my openweathermap account automatically banned for too many api calls within a minute.
+--[Description](#description)
 
-Below you can find screenshots of the application in action!
-![screenshot](./assets/assets/before.png)
-![screenshot](./assets/assets/after.png)
+--[Usage](#usage)
 
-<a href="https://sfelbeck.github.io/Weather_Dashboard_SFelbeck/">You can find the site here</a>
+--[Installation](#installation)
+
+--[Testing](#testing)
+
+--[Contributing](#contributing)
+
+--[Questions](#questions)
+
+
+## Description: 
+This is an app that links to a weather API and returns current information based on city searched 
+
+## Usage:
+you can type in a city name and hit the enter button to recieve current weather information about that city. the application also stores the most recent few previous searches so and provides buttons to use those searches
+
+## Installation: 
+this app is based within the browser and does not require installation 
+
+## Testing:
+same as use
+
+## Contributing: 
+Stefan Felbeck 
+
+## Questions: 
+If you have any questions you can reach me at:
+[GitHub](https://www.github.com/SFelbeck) or at [email](mailto:stefanfelbeck@gmail.com).
